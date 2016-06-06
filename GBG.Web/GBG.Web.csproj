@@ -102,12 +102,45 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Bootstrap\bootstrap-theme.css" />
+    <Content Include="Content\Bootstrap\bootstrap-theme.min.css" />
+    <Content Include="Content\Bootstrap\bootstrap.css" />
+    <Content Include="Content\Bootstrap\bootstrap.min.css" />
+    <Content Include="Content\site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\app\Service\SampleService.js" />
+    <Content Include="Scripts\app\Service\StatusService.js" />
+    <Content Include="Scripts\app\Service\UserService.js" />
+    <Content Include="Scripts\Vendors\angular-mocks.js" />
+    <Content Include="Scripts\Vendors\angular-route.js" />
+    <Content Include="Scripts\Vendors\angular-route.min.js" />
+    <Content Include="Scripts\Vendors\angular.js" />
+    <Content Include="Scripts\Vendors\angular.min.js" />
+    <Content Include="Scripts\app\app.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\Bootstrap\bootstrap.min.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap-theme.min.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap-theme.css.map" />
+    <Content Include="Scripts\Vendors\angular-route.min.js.map" />
+    <None Include="Scripts\Vendors\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\Vendors\bootstrap.js" />
+    <Content Include="Scripts\Vendors\bootstrap.min.js" />
+    <Content Include="Scripts\Vendors\jquery-1.9.1.js" />
+    <Content Include="Scripts\Vendors\jquery-1.9.1.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SamplesController.cs" />
+    <Compile Include="Controllers\StatusController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -116,6 +149,9 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Scripts\Vendors\angular.min.js.map" />
+    <Content Include="Scripts\Vendors\jquery-1.9.1.min.map" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -125,8 +161,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+    <Folder Include="Scripts\app\Samples\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GBG.Entities\GBG.Entities.csproj">
+      <Project>{81d98b02-d043-46cd-a17c-c463138d162e}</Project>
+      <Name>GBG.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
