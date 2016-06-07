@@ -60,8 +60,7 @@ namespace GBG.Web.Controllers
       }
 
       [HttpPost]
-      [ResponseType(typeof(Sample))]
-      public IHttpActionResult Post(Sample sampleData)
+      public IHttpActionResult Post([FromBody]Sample sampleData)
       {
          try
          {

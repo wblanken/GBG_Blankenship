@@ -1,0 +1,35 @@
+﻿<div class="row">
+   <h3>Samples:</h3>
+   <div class="row filter-row">
+      <div class="col-sm-4 col-xl-2">
+         <label for="statusSelect">Filter Status:</label>
+         <select id="statusSelect" class="form-control" ng-model="selectedStatus" ng-change="filterSamples()" ng-options="status.Message for status in statuses">
+            <option value>None</option>
+         </select>
+      </div>
+      <div class="col-sm-4 col-xl-2">
+         <label for="userNameInput">Filter User Name:</label>
+         <input id="userNameInput" class="form-control" ng-model="userNameSearch" ng-change="filterSamples()" type="text" />
+      </div>
+   </div>
+   <table class="table table-fixed">
+      <thead>
+         <tr>
+            <th width="10%">Id</th>
+            <th width="20%">Barcode</th>
+            <th width="20%">Creation Date</th>
+            <th width="25%">Created By</th>
+            <th width="25%">Status</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr ng-repeat="sample in samples">
+            <td width="10%">{{sample.Id}}</td>
+            <td width="20%">{{sample.BarCode}}</td>
+            <td width="20%">{{sample.CreatedAt | date}}</td>
+            <td width="25%">{{sample.User.FirstName}} {{sample.User.LastName}}</td>
+            <td width="25%">{{sample.Status.Message}}</td>
+         </tr>
+      </tbody>
+   </table>
+</div>

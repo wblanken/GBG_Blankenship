@@ -150,17 +150,17 @@ namespace GBG.Entities
       {
          using (var db = DbContext.GetDataContext())
          {
-            if (null == sample.User || 
-               null == db.GetTable<User>().SingleOrDefault(s => s.Id == sample.User.Id))
+            if (null == sample.User)
             {
                throw new ArgumentNullException(nameof(sample.User), "The sample user data is invalid");
             }
 
-            if (null == sample.Status ||
-                null == db.GetTable<Status>().SingleOrDefault(s => s.Id == sample.Status.Id))
+            if (null == sample.Status)
             {
                throw new ArgumentNullException(nameof(sample.Status), "The sample status data is invalid");
             }
+
+            sample.CreatedAt = DateTime.Now;
 
             db.GetTable<Sample>().InsertOnSubmit(sample);
             db.SubmitChanges();

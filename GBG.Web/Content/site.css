@@ -7,7 +7,7 @@
   width: 97%;
 }
 .table-fixed tbody {
-  height: 400px;
+  height: 300px;
   overflow-y: auto;
   width: 100%;
 }
@@ -17,4 +17,8 @@
 .table-fixed tbody td, .table-fixed thead > tr> th {
   float: left;
   border-bottom-width: 0;
+}
+
+.form-inline label {
+    line-height: 34px;
 }
