@@ -245,3 +245,4 @@ ModelManifest.xml
 .fake/
 /Data
 GBG.FileReader/.idea/
+GBG.FileReader/data/output_file.tsv
